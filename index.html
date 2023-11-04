@@ -53,7 +53,6 @@
                                         <li><a href="#love_story_area">Our Story</a></li>
                                         <li><a href="#gallery_area">Gallery</a></li>
                                         <li><a href="#program_details_area">Ceremonies</a></li>
-                                        <li><a href="#attending_area">Contact</a></li>
                                         <li><a href="#location_area">Location</a></li>
                                     </ul>
                                 </nav>
@@ -510,9 +509,14 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 
     <script>
         $('#clock').countdown('2023/12/04', function (event) {
-            $(this).html(event.strftime(
-                '<div class="countdown_wrap d-flex"><div  class="single_countdown"><h3>%D</h3><span>Days</span></div><div class="single_countdown"><h3>%H</h3><span>Hours</span></div><div class="single_countdown"><h3>%M</h3><span>Minutes</span></div><div class="single_countdown"><h3>%S</h3><span>Seconds</span></div></div>'
-            ));
+          $(this).html(event.strftime(
+              '<div class="countdown_wrap d-flex"><div  class="single_countdown"><h3>%D</h3><span>Days</span></div><div class="single_countdown"><h3>%H</h3><span>Hours</span></div><div class="single_countdown"><h3>%M</h3><span>Minutes</span></div><div class="single_countdown"><h3>%S</h3><span>Seconds</span></div></div>'
+          ));
+        });
+
+        $(".main-menu a").on("click", function(){
+          $(".main-menu a").removeClass('active')
+          $(this).addClass('active')
         });
     </script>
     <script>
